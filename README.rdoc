@@ -35,7 +35,7 @@ Now you can follow others in your controller:
     	User.followees_of(current_user)
     ...
     
-__In current version, only following the same model is allowed__
+**In current version, only following the same model is allowed
 
 ---------------------------------------------------------------------------------------------------------------------------
 
