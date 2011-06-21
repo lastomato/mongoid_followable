@@ -1,8 +1,8 @@
-* mongoid_followable *
+*mongoid_followable*
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-* Installation *
+*Installation*
 
 In console:
     gem install mongoid_followable
@@ -11,7 +11,7 @@ or in Gemfile:
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-* Usage *
+*Usage*
 
 To make model followable you need to include Mongoid::Followable into your document:
     class User
@@ -39,12 +39,12 @@ __In current version, only following the same model is allowed__
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-* TODO *
+*TODO*
 
 inter-models followable
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-* Copyright *
+*Copyright*
 
 Copyright &copy; Jie Fan. See LICENSE.txt for further details.    
