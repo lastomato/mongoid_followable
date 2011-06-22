@@ -6,10 +6,10 @@ Gem::Specification.new do |s|
   s.name        = "mongoid_followable"
   s.version     = Mongoid::Followable::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.date        = "2011-06-21"
+  s.date        = "2011-06-22"
   s.authors     = ["Jie Fan"]
   s.email       = ["ustc.flyingfox@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/lastomato/mongoid_followable"
   s.summary     = %q{ adds following feature to models }
   s.description = %q{ Mongoid Followable adds following feature to models }
 
