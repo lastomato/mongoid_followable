@@ -60,6 +60,10 @@ Now you can follow others in your controller:
 * most/least followed/following
 * follow part of user like only names etc(is this necessary?)
 
+== Thanks
+
+Thanks the author(s) of acts_as_followable, you can find this gem here[https://github.com/xpepermint/acts_as_followable]
+
 == Copyright
 
 Copyright (c) Jie Fan. See LICENSE.txt for further details.    
