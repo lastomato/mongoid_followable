@@ -3,9 +3,9 @@
 == Installation
 
 In console:
-    gem install mongoid_followable
+  gem install mongoid_followable
 or in Gemfile:
-    gem 'mongoid_followable'
+  gem 'mongoid_followable'
 
 == Usage
 
@@ -15,27 +15,27 @@ To make model followable you need to include Mongoid::Followable into your docum
     include Mongoid::Followable
   end
 Now you can follow others in your controller:
-    ...
-      @user = some_other_user
-      current_user.follow(@user)
+  ...
+    @user = some_other_user
+    current_user.follow(@user)
     	
-      current_user.unfollow(@user)
+    current_user.unfollow(@user)
     	
-      current_user.follower_of?(@user)
-      current_user.followee_of?(@user)
+    current_user.follower_of?(@user)
+    current_user.followee_of?(@user)
     	
-      current_user.follower_count
-      current_user.followee_count
+    current_user.follower_count
+    current_user.followee_count
     	
-      User.followers_of(current_user)
-      User.followees_of(current_user)
-    ...
+    User.followers_of(current_user)
+    User.followees_of(current_user)
+  ...
     
-**In current version, only following the same model is allowed
+* In current version, only following the same model is allowed
 
 == TODO
 
-*inter-models followable
+* inter-models followable
 
 == Copyright
 
