@@ -50,7 +50,7 @@ Now you can follow others in your controller:
     @user.followees_by_type("group")
   ...
     
-* Any bug or issue, please send me an email via ustc.flyingfox@gmail.com
+* Any bug or issue, please send me an email: ustc.flyingfox@gmail.com
 
 == TODO
 
