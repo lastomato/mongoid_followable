@@ -47,7 +47,7 @@ Now you can follow others in your controller:
     @group.followers_by_type("user")
     @group.followers_count_by_type("user")
     @user.followees_by_type("group")
-    @user.followees_by_type("group")
+    @user.followees_count_by_type("group")
   ...
     
 * Any bug or issue, please send me an email: ustc.flyingfox@gmail.com
