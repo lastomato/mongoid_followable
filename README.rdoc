@@ -5,7 +5,7 @@
 In console:
   gem install mongoid_followable
 or in Gemfile:
-  gem 'mongoid_followable'
+  gem 'mongoid_followable', ">= 0.1.0"
 
 == Usage
 
@@ -14,28 +14,47 @@ To make model followable you need to include Mongoid::Followable into your docum
     include Mongoid::Document
     include Mongoid::Followable
   end
+
+  class Group
+    include Mongoid::Document
+    include Mongoid::Followable
+  end
+
 Now you can follow others in your controller:
   ...
-    @user = some_other_user
-    current_user.follow(@user)
+    @group = Group.new
+    @group.save
+
+    current_user.follow(@group)
     	
-    current_user.unfollow(@user)
+    current_user.unfollow(@group)
     	
-    current_user.follower_of?(@user)
-    current_user.followee_of?(@user)
+    current_user.follower_of?(@group)
+    current_user.followee_of?(@group)
     	
-    current_user.follower_count
-    current_user.followee_count
+    current_user.followers_count
+    current_user.followees_count
     	
-    User.followers_of(current_user)
-    User.followees_of(current_user)
+    User.followers_of(@group)
+    User.followees_of(@group)
+
+    @group.all_followers
+    @user.all_followees
+
+    @group.followers_by_type("user")
+    @user.followees_by_type("group")
+
+    @group.followers_by_type("user")
+    @group.followers_count_by_type("user")
+    @user.followees_by_type("group")
+    @user.followees_by_type("group")
   ...
     
-* In current version, only following the same model is allowed
+* Any bug or issue, please send me an email via ustc.flyingfox@gmail.com
 
 == TODO
 
-* inter-models followable
+* inter-models followable #FINISHED#
 * divide into two parts: followable(being followed) and follower(following others)
 * following history/followed history
 * most/least followed/following
