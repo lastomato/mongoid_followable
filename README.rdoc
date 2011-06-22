@@ -10,10 +10,10 @@ or in Gemfile:
 == Usage
 
 To make model followable you need to include Mongoid::Followable into your document:
-    class User
-      include Mongoid::Document
-      include Mongoid::Followable
-    end
+  class User
+    include Mongoid::Document
+    include Mongoid::Followable
+  end
 Now you can follow others in your controller:
     ...
       @user = some_other_user
