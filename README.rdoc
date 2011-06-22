@@ -36,6 +36,10 @@ Now you can follow others in your controller:
 == TODO
 
 * inter-models followable
+* divide into two parts: followable(being followed) and follower(following others)
+* following history/followed history
+* most/least followed/following
+* follow part of user like only names etc(is this necessary?)
 
 == Copyright
 
