@@ -1,50 +1,46 @@
-*mongoid_followable*
+= mongoid_followable
 
----------------------------------------------------------------------------------------------------------------------------
-
-*Installation*
+== Installation
 
 In console:
-    gem install mongoid_followable
+  gem install mongoid_followable
 or in Gemfile:
-    gem 'mongoid_followable'
+  gem 'mongoid_followable'
 
----------------------------------------------------------------------------------------------------------------------------
-
-*Usage*
+== Usage
 
 To make model followable you need to include Mongoid::Followable into your document:
-    class User
-    	include Mongoid::Document
-    	include Mongoid::Followable
-    end
+  class User
+    include Mongoid::Document
+    include Mongoid::Followable
+  end
 Now you can follow others in your controller:
-    ...
-    	@user = some_other_user
-    	current_user.follow(@user)
+  ...
+    @user = some_other_user
+    current_user.follow(@user)
     	
-    	current_user.unfollow(@user)
+    current_user.unfollow(@user)
     	
-    	current_user.follower_of?(@user)
-    	current_user.followee_of?(@user)
+    current_user.follower_of?(@user)
+    current_user.followee_of?(@user)
     	
-    	current_user.follower_count
-    	current_user.followee_count
+    current_user.follower_count
+    current_user.followee_count
     	
-    	User.followers_of(current_user)
-    	User.followees_of(current_user)
-    ...
+    User.followers_of(current_user)
+    User.followees_of(current_user)
+  ...
     
-**In current version, only following the same model is allowed
+* In current version, only following the same model is allowed
 
----------------------------------------------------------------------------------------------------------------------------
+== TODO
 
-*TODO*
+* inter-models followable
+* divide into two parts: followable(being followed) and follower(following others)
+* following history/followed history
+* most/least followed/following
+* follow part of user like only names etc(is this necessary?)
 
-inter-models followable
+== Copyright
 
----------------------------------------------------------------------------------------------------------------------------
-
-*Copyright*
-
-Copyright &copy; Jie Fan. See LICENSE.txt for further details.    
+Copyright (c) Jie Fan. See LICENSE.txt for further details.    
