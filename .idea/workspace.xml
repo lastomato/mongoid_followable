@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90bdec60-890b-4083-b05d-2f665a1f4d70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/follow.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mongoid_followable/followable.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/group.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mongoid_followable.iml" afterPath="$PROJECT_DIR$/.idea/mongoid_followable.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mongoid_followable/follower.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/mongoid_followable.rb" afterPath="$PROJECT_DIR$/lib/mongoid_followable.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/mongoid_followable/followable.rb" afterPath="$PROJECT_DIR$/lib/mongoid_followable/followable.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/mongoid_followable/version.rb" afterPath="$PROJECT_DIR$/lib/mongoid_followable/version.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongoid_followable.gemspec" afterPath="$PROJECT_DIR$/mongoid_followable.gemspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/mongoid/followable_spec.rb" afterPath="$PROJECT_DIR$/spec/mongoid/followable_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/user.rb" afterPath="$PROJECT_DIR$/spec/models/user.rb" />
     </list>
     <ignored path="mongoid_followable.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +32,26 @@
     <favorites_list name="mongoid_followable" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="mongoid_followable.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/mongoid_followable.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="70" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.rdoc" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.rdoc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="70" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.6956522">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -49,19 +65,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/followee.rb" />
         <option value="$PROJECT_DIR$/app/models/follower.rb" />
         <option value="$PROJECT_DIR$/spec/models/group.rb" />
-        <option value="$PROJECT_DIR$/lib/mongoid_followable/version.rb" />
         <option value="$PROJECT_DIR$/lib/mongoid_followable/follow.rb" />
         <option value="$PROJECT_DIR$/lib/generators/mongoid_followable/install_generator.rb" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
-        <option value="$PROJECT_DIR$/lib/mongoid_followable.rb" />
         <option value="$PROJECT_DIR$/app/models/follow.rb" />
         <option value="$PROJECT_DIR$/spec/mongoid/followable_spec.rb" />
-        <option value="$PROJECT_DIR$/lib/mongoid_followable/followable.rb" />
         <option value="$PROJECT_DIR$/mongoid_followable.gemspec" />
+        <option value="$PROJECT_DIR$/lib/mongoid_followable/follower.rb" />
+        <option value="$PROJECT_DIR$/lib/mongoid_followable/followable.rb" />
+        <option value="$PROJECT_DIR$/lib/mongoid_followable.rb" />
+        <option value="$PROJECT_DIR$/spec/models/user.rb" />
+        <option value="$PROJECT_DIR$/lib/mongoid_followable/version.rb" />
+        <option value="$PROJECT_DIR$/README.rdoc" />
       </list>
     </option>
   </component>
@@ -91,7 +109,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -121,24 +138,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongoid_followable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongoid_followable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongoid" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -212,6 +211,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -267,14 +267,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1280" height="752" extended-state="1" />
-    <editor active="false" />
+    <frame x="1" y="24" width="1598" height="851" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1770335" sideWeight="0.67128986" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17643312" sideWeight="0.67128986" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -335,63 +335,73 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/group.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="29" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="9" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/mongoid_followable.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="96" selection-end="96" vertical-scroll-proportion="0.02529511">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/mongoid/followable_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="31" selection-start="1675" selection-end="1675" vertical-scroll-proportion="1.7959528">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/follow.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="44" selection-start="315" selection-end="315" vertical-scroll-proportion="0.2529511">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/mongoid_followable/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="55" selection-end="55" vertical-scroll-proportion="0.05059022" />
+        <state line="71" column="31" selection-start="1675" selection-end="1675" vertical-scroll-proportion="1.7959528" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mongoid_followable.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="66" selection-start="437" selection-end="437" vertical-scroll-proportion="0.2782462">
+        <state line="11" column="66" selection-start="437" selection-end="437" vertical-scroll-proportion="0.2782462" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/follow.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="44" selection-start="315" selection-end="315" vertical-scroll-proportion="0.2173913">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/mongoid_followable/followable.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="46" selection-start="3816" selection-end="3816" vertical-scroll-proportion="3.9966273">
+        <state line="15" column="27" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/mongoid_followable/follower.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="44" selection-start="299" selection-end="299" vertical-scroll-proportion="0.26086956">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/mongoid_followable/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="20" selection-start="55" selection-end="55" vertical-scroll-proportion="0.04347826">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="27" selection-start="96" selection-end="96" vertical-scroll-proportion="0.06521739">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/group.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="29" selection-start="69" selection-end="69" vertical-scroll-proportion="0.04347826">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/mongoid_followable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="70" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rdoc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="70" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.6956522">
           <folding />
         </state>
       </provider>

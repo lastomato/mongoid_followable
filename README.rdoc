@@ -5,7 +5,7 @@
 In console:
   gem install mongoid_followable
 or in Gemfile:
-  gem 'mongoid_followable', ">= 0.1.0"
+  gem 'mongoid_followable', "~> 0.1.1"
 
 == Usage
 
@@ -13,6 +13,7 @@ To make model followable you need to include Mongoid::Followable into your docum
   class User
     include Mongoid::Document
     include Mongoid::Followable
+    include Mongoid::Follower
   end
 
   class Group
@@ -55,10 +56,11 @@ Now you can follow others in your controller:
 == TODO
 
 * inter-models followable #FINISHED#
-* divide into two parts: followable(being followed) and follower(following others)
+* divide into two parts: followable(being followed) and follower(following others) #FINISHED#
 * following history/followed history
 * most/least followed/following
-* follow part of user like only names etc(is this necessary?)
+* add authorization to followable models
+* follow part of model like only following tags updation of an article etc(is this necessary?)
 
 == Thanks
 
