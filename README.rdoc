@@ -9,7 +9,7 @@ or in Gemfile:
 
 == Usage
 
-To make model followable you need to include Mongoid::Followable into your document:
+To make model followable you need to include Mongoid::Followable into your document;Meanwhile, you also need to include Mongoid::Follower in your follower model:
   class User
     include Mongoid::Document
     include Mongoid::Followable
