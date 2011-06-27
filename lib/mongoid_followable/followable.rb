@@ -3,6 +3,8 @@ module Mongoid
     extend ActiveSupport::Concern
 
     included do |base|
+      base.field :cannot_followed, :type => Array, :default => []
+      base.field :followed_history, :type => Array, :default => []
       base.has_many :followers, :class_name => "Follow", :as => :followable, :dependent => :destroy
     end
 
@@ -27,6 +29,26 @@ module Mongoid
         model.followees_by_type(self.name)
       end
 
+    end
+
+    # set which models cannot follow self
+    #
+    # Example:
+    #   >> @ruby.set_authorization('user')
+    #   => true
+
+    def set_authorization(*models)
+      models.each do |model|
+        self.cannot_followed << model.capitalize
+      end
+      self.save
+    end
+
+    def unset_authorization(*models)
+      models.each do |model|
+        self.cannot_followed -= [model.capitalize]
+      end
+      self.save
     end
 
     # see if this model is followee of some model
@@ -77,6 +99,20 @@ module Mongoid
 
     def followers_count_by_type(type)
       self.followers.by_type(type).count
+    end
+
+    # see model's followed history
+    #
+    # Example:
+    #   >> @ruby.ever_followed
+    #   => [@jim]
+
+    def ever_followed
+      follow = []
+      self.followed_history.each do |h|
+        follow << h.split('_')[0].constantize.find(h.split('_')[1])
+      end
+      follow
     end
 
     private

@@ -35,6 +35,9 @@ describe Mongoid::Followable do
 
         u.followees_count_by_type("user").should == 1
         @v.followers_count_by_type("user").should == 1
+
+        u.ever_follow.should == [@v]
+        @v.ever_followed.should == [u]
       end
 
       it "unfollowing a user" do
@@ -73,6 +76,11 @@ describe Mongoid::Followable do
 
         u.followees_count_by_type("group").should == 1
         @g.followers_count_by_type("user").should == 1
+
+        u.follow(@v)
+
+        u.ever_follow.should == [@g, @v]
+        @g.ever_followed.should == [u]
       end
 
       it "unfollowing a group" do

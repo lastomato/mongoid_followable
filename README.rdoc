@@ -5,7 +5,7 @@
 In console:
   gem install mongoid_followable
 or in Gemfile:
-  gem 'mongoid_followable', "~> 0.1.1"
+  gem 'mongoid_followable', "~> 0.1.5"
 
 == Usage
 
@@ -21,20 +21,30 @@ To make model followable you need to include Mongoid::Followable into your docum
     include Mongoid::Followable
   end
 
-Now you can follow others in your controller:
+You can set authorization:
   ...
+    current_user.set_authorization('user', 'game') # now current_user cannot follow User and Game model
+    current_user.unset_authorization('User', 'Game')
+
+You can follow a model:
+
     @group = Group.new
     @group.save
 
     current_user.follow(@group)
-    	
     current_user.unfollow(@group)
+
+You can also judge whether a model is a follower of another model or a model is a followee of another model:
     	
     current_user.follower_of?(@group)
     current_user.followee_of?(@group)
-    	
+
+You can get a model's follower/followee count:
+
     current_user.followers_count
     current_user.followees_count
+
+You can get a model's followers/followees:
     	
     User.followers_of(@group)
     User.followees_of(@group)
@@ -42,13 +52,22 @@ Now you can follow others in your controller:
     @group.all_followers
     @user.all_followees
 
+You can get a model's followers/followees by type
+
     @group.followers_by_type("user")
     @user.followees_by_type("group")
+
+And their count:
 
     @group.followers_by_type("user")
     @group.followers_count_by_type("user")
     @user.followees_by_type("group")
     @user.followees_count_by_type("group")
+
+You can also get a model's follow/followed history:
+
+    @user.ever_follow
+    @group.ever_followed
   ...
     
 * Any bug or issue, please send me an email: ustc.flyingfox@gmail.com
