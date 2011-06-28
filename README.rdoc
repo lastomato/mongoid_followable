@@ -76,9 +76,9 @@ You can also get a model's follow/followed history:
 
 * inter-models followable #FINISHED#
 * divide into two parts: followable(being followed) and follower(following others) #FINISHED#
-* following history/followed history
+* following history/followed history #FINISHED#
 * most/least followed/following
-* add authorization to followable models
+* add authorization to followable models #FINISHED#
 * follow part of model like only following tags updation of an article etc(is this necessary?)
 
 == Thanks
