@@ -5,7 +5,7 @@
 In console:
   gem install mongoid_followable
 or in Gemfile:
-  gem 'mongoid_followable', "~> 0.1.5"
+  gem 'mongoid_followable', "~> 0.1.6"
 
 == Usage
 
@@ -21,12 +21,11 @@ To make model followable you need to include Mongoid::Followable into your docum
     include Mongoid::Followable
   end
 
-You can set authorization:
-  ...
+Now you can set authorization:
     current_user.set_authorization('user', 'game') # now current_user cannot follow User and Game model
     current_user.unset_authorization('User', 'Game')
 
-You can follow a model:
+And then you can follow a model:
 
     @group = Group.new
     @group.save
@@ -39,12 +38,12 @@ You can also judge whether a model is a follower of another model or a model is 
     current_user.follower_of?(@group)
     current_user.followee_of?(@group)
 
-You can get a model's follower/followee count:
+Moreover, it's easy to get a model's follower/followee count:
 
     current_user.followers_count
     current_user.followees_count
 
-You can get a model's followers/followees:
+Of course, you can get a list of followers/followees:
     	
     User.followers_of(@group)
     User.followees_of(@group)
@@ -52,7 +51,7 @@ You can get a model's followers/followees:
     @group.all_followers
     @user.all_followees
 
-You can get a model's followers/followees by type
+Getting a model's followers/followees by type is also possible:
 
     @group.followers_by_type("user")
     @user.followees_by_type("group")
@@ -68,7 +67,17 @@ You can also get a model's follow/followed history:
 
     @user.ever_follow
     @group.ever_followed
-  ...
+
+Another feature is to get a list of models which has the most followers/followees:
+
+    User.with_max_followees
+    User.with_min_followees
+    User.with_max_followees_by_type('group')
+    User.with_min_followees_by_type('group')
+    Group.with_max_followers
+    Group.with_min_followers
+    Group.with_max_followers_by_type('user')
+    Group.with_min_followers_by_type('user')
     
 * Any bug or issue, please send me an email: ustc.flyingfox@gmail.com
 
@@ -77,7 +86,7 @@ You can also get a model's follow/followed history:
 * inter-models followable #FINISHED#
 * divide into two parts: followable(being followed) and follower(following others) #FINISHED#
 * following history/followed history #FINISHED#
-* most/least followed/following
+* most/least followed/following #FINISHED
 * add authorization to followable models #FINISHED#
 * follow part of model like only following tags updation of an article etc(is this necessary?)
 

@@ -38,6 +38,11 @@ describe Mongoid::Followable do
 
         u.ever_follow.should == [@v]
         @v.ever_followed.should == [u]
+
+        User.with_max_followees.should == [u]
+        User.with_max_followers.should == [@v]
+        User.with_max_followees_by_type('user').should == [u]
+        User.with_max_followers_by_type('user').should == [@v]
       end
 
       it "unfollowing a user" do
@@ -81,6 +86,11 @@ describe Mongoid::Followable do
 
         u.ever_follow.should == [@g, @v]
         @g.ever_followed.should == [u]
+
+        User.with_max_followees.should == [u]
+        Group.with_max_followers.should == [@g]
+        User.with_max_followees_by_type('group').should == [u]
+        Group.with_max_followers_by_type('user').should == [@g]
       end
 
       it "unfollowing a group" do

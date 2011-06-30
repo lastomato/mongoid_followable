@@ -29,6 +29,38 @@ module Mongoid
         model.followees_by_type(self.name)
       end
 
+      # 4 methods in this function
+      #
+      # Example:
+      #   >> Group.with_max_followers
+      #   => [@ruby]
+      #   >> Group.with_max_followers_by_type('user')
+      #   => [@ruby]
+
+      def method_missing(name, *args)
+        if name.to_s =~ /^with_(max|min)_followers$/i
+          follow_array = self.all.to_a.sort! { |a, b| a.followers_count <=> b.followers_count }
+          if $1 == "max"
+            max = follow_array[-1].followers_count
+            follow_array.select { |c| c.followers_count == max }
+          elsif $1 == "min"
+            min = follow_array[0].followers_count
+            follow_array.select { |c| c.followers_count == min }
+          end
+        elsif name.to_s =~ /^with_(max|min)_followers_by_type$/i
+          follow_array = self.all.to_a.sort! { |a, b| a.followers_count_by_type(args[0]) <=> b.followers_count_by_type(args[0]) }
+          if $1 == "max"
+            max = follow_array[-1].followers_count_by_type(args[0])
+            follow_array.select { |c| c.followers_count_by_type(args[0]) == max }
+          elsif $1 == "min"
+            min = follow_array[0].followers_count
+            follow_array.select { |c| c.followers_count_by_type(args[0]) == min }
+          end
+        else
+          super
+        end
+      end
+
     end
 
     # set which models cannot follow self
