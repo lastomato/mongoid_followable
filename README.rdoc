@@ -78,6 +78,16 @@ Another feature is to get a list of models which has the most followers/followee
     Group.with_min_followers
     Group.with_max_followers_by_type('user')
     Group.with_min_followers_by_type('user')
+
+Now you can tell if two models have some common followers/followees by following methods:
+
+    @user.common_followees?(@another_user)
+    @user.common_followers?(@group)
+
+And see what the common followers/followees are:
+
+    @user.common_followees_with(@another_user)
+    @user.common_followers_with(@group)
     
 * Any bug or issue, please send me an email: ustc.flyingfox@gmail.com
 
@@ -88,7 +98,7 @@ Another feature is to get a list of models which has the most followers/followee
 * following history/followed history #FINISHED#
 * most/least followed/following #FINISHED
 * add authorization to followable models #FINISHED#
-* follow part of model like only following tags updation of an article etc(is this necessary?)
+* common followers/followees #FINISHED#
 
 == Thanks
 

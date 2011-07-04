@@ -175,6 +175,26 @@ module Mongoid
       follow
     end
 
+    # return if there is any common followees
+    #
+    # Example:
+    #   >> @jim.common_followees?(@tom)
+    #   => true
+
+    def common_followees?(model)
+      0 < (rebuild_instances(self.followees) & rebuild_instances(model.followees)).length
+    end
+
+    # get common followees with some model
+    #
+    # Example:
+    #   >> @jim.common_followees_with(@tom)
+    #   => [@ruby]
+
+    def common_followees_with(model)
+      rebuild_instances(self.followees) & rebuild_instances(model.followees)
+    end
+
     private
       def rebuild_instances(follows)
         follow_list = []

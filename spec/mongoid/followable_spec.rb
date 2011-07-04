@@ -39,6 +39,11 @@ describe Mongoid::Followable do
         u.ever_follow.should == [@v]
         @v.ever_followed.should == [u]
 
+        u.common_followees?(@v).should be_false
+        @v.common_followers?(u).should be_false
+        u.common_followees_with(@v).should == []
+        @v.common_followers_with(u).should == []
+
         User.with_max_followees.should == [u]
         User.with_max_followers.should == [@v]
         User.with_max_followees_by_type('user').should == [u]
@@ -86,6 +91,11 @@ describe Mongoid::Followable do
 
         u.ever_follow.should == [@g, @v]
         @g.ever_followed.should == [u]
+
+        u.common_followees?(@v).should be_false
+        @v.common_followers?(@g).should be_true
+        u.common_followees_with(@v).should == []
+        @v.common_followers_with(@g).should == [u]
 
         User.with_max_followees.should == [u]
         Group.with_max_followers.should == [@g]
