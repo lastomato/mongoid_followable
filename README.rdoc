@@ -5,7 +5,7 @@
 In console:
   gem install mongoid_followable
 or in Gemfile:
-  gem 'mongoid_followable', "~> 0.1.6"
+  gem 'mongoid_followable', "~> 0.1.8"
 
 == Usage
 
