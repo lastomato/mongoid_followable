@@ -99,6 +99,9 @@ And see what the common followers/followees are:
 * most/least followed/following #FINISHED
 * add authorization to followable models #FINISHED#
 * common followers/followees #FINISHED#
+* add support for mongo_mapper in next version
+
+!!If you have any advice, plese do not hesitate to tell me!!
 
 == Thanks
 
