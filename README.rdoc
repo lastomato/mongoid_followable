@@ -7,7 +7,7 @@ Please refer to mongo_followable[https://github.com/lastomato/mongo_followable] 
 In console:
   gem install mongoid_followable
 or in Gemfile:
-  gem 'mongoid_followable', "~> 0.1.8"
+  gem 'mongoid_followable', "~> 0.1.9"
 
 == Usage
 
