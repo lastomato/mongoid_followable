@@ -11,12 +11,12 @@ Gem::Specification.new do |s|
   s.email       = ["ustc.flyingfox@gmail.com"]
   s.homepage    = "https://github.com/lastomato/mongoid_followable"
   s.summary     = %q{ adds following feature to models }
-  s.description = %q{ Mongoid Followable adds following feature to models }
+  s.description = %q{ Please refer to http://rubygems.org/gems/mongo_followable for latest versions }
 
   s.rubyforge_project = "mongoid_followable"
 
-  s.add_dependency("mongoid", "~> 2.0.1")
-  s.add_dependency("bson_ext", "~> 1.3.0")
+  s.add_development_dependency("mongoid", "~> 2.0.1")
+  s.add_development_dependency("bson_ext", "~> 1.3.0")
   s.add_development_dependency("database_cleaner", "~> 0.6")
   s.add_development_dependency("rspec", "~> 2.6")
 

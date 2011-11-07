@@ -1,5 +1,7 @@
 = mongoid_followable
 
+Please refer to mongo_followable[https://github.com/lastomato/mongo_followable] for latest version.
+
 == Installation
 
 In console:
