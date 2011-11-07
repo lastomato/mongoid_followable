@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "mongoid_followable"
   s.version     = Mongoid::Followable::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.date        = "2011-07-04"
+  s.date        = "2011-11-06"
   s.authors     = ["Jie Fan"]
   s.email       = ["ustc.flyingfox@gmail.com"]
   s.homepage    = "https://github.com/lastomato/mongoid_followable"
